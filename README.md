@@ -1,3 +1,3 @@
-# WTTD
-## Exercícios Módulo 1
+# WTTD 2015
+## Exercícios WTTD 2015
 ### Python

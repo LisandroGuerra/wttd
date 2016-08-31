@@ -27,7 +27,12 @@ def match_ends(words):
         if len(word) >= 2 and word[0] == word[-1]:
             count += 1
     return count
-
+#
+#def match_ends(words):
+#    return sum(1 for w in words if len(w) >1 and w[0] == w[-1])
+#    
+#ou    
+#    return len(w for w in words if len(w) >1 and w[0] == w[-1])
 
 # B. front_x
 # Given a list of strings, return a list with the strings

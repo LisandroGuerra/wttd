@@ -19,9 +19,16 @@
 def verbing(s):
     if len(s) < 3:
         return s
-    if s[-3:] == 'ing':
-        return s + 'ly'
-    return s + 'ing'
+    
+    sufix = 'ly' if s.endswith('ing')
+    return s + sufix
+    
+#def verbing(s):
+#    if len(s) < 3:
+#        return s
+#    if s[-3:] == 'ing':
+#        return s + 'ly'
+#    return s + 'ing'
 
 
 # E. not_bad

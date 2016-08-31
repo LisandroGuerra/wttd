@@ -80,6 +80,10 @@ def front_back(a, b):
             bb = b[lb//2+1:]
     return af + bf + ab + bb
 
+#depois 
+#1 fazer achando oo meio a_mid = ... a_mid = ...
+#2 fazer com math.ceil
+
 
 # Simple provided test() function used in main() to print
 # what each function returns vs. what it's supposed to return.

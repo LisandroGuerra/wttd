@@ -82,6 +82,16 @@ def front_back(a, b):
 
 #depois 
 #1 fazer achando oo meio a_mid = ... a_mid = ...
+def front_back(a, b):
+    def mid(s):
+        if len(s) % 2 == 0:
+            mid = int(len(s) / 2)
+        else:
+            mid = int(len(s)/2) + 1
+        return mid
+    mid_a, mid_b = mid(a), mid(b)
+    t = (a[:mid_a], b[:mid_b], a[mid_a:], b[mid_b:])
+    return ''.join(t)
 #2 fazer com math.ceil
 
 

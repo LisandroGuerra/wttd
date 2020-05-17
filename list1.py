@@ -31,7 +31,9 @@ def match_ends(words):
 #def match_ends(words):
 #    return sum(1 for w in words if len(w) >1 and w[0] == w[-1])
 #    
-#ou    
+#ou 
+#
+#def match_ends(words):
 #    return len(w for w in words if len(w) >1 and w[0] == w[-1])
 
 # B. front_x
@@ -49,8 +51,7 @@ def front_x(words):
             xlist.append(word)
         else:
             other.append(word)
-
-    return sorted(xlist)+sorted(other)
+    return sorted(xlist) + sorted(other)
 
 
 # C. sort_last

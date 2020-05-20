@@ -65,10 +65,10 @@ def sort_last(tuples):
         return element[-1]
     return sorted(tuples,  key=take_last)
 
-
-def sort_last(tuples):
-    lista = list(tuples)
-    return (sorted(lista, key=lambda element: element[-1]))
+# or
+# def sort_last(tuples):
+#     lista = list(tuples)
+#     return (sorted(lista, key=lambda element: element[-1]))
 
 
 # Simple provided test() function used in main() to print

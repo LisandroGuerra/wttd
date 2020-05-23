@@ -21,9 +21,26 @@ def remove_adjacent(nums):
 # list of all the elements in sorted order. You may modify the passed in lists.
 # Ideally, the solution should work in "linear" time, making a single
 # pass of both lists.
-from heapq import merge
 
 def linear_merge(list1, list2):
+    res = []
+    while len(list1) and len(list2):
+        if list1[0] < list2[0]:
+            res.append(list1.pop(0))
+            print(res)
+        else:
+            res.append(list2.pop(0))
+            print(res)
+    res.extend(list1)
+    res.extend(list2)
+    return res
+#
+# or
+#
+
+from heapq import merge
+
+def linear_merge_2(list1, list2):
     return list(merge(list1 + list2))
 
 
@@ -60,6 +77,15 @@ def main():
     test(linear_merge(['aa', 'xx'], ['bb', 'cc', 'zz']),
          ['aa', 'bb', 'cc', 'xx', 'zz'])
     test(linear_merge(['aa', 'aa'], ['aa', 'bb', 'bb']),
+         ['aa', 'aa', 'aa', 'bb', 'bb'])
+    
+    print()
+    print('linear_merge_2')
+    test(linear_merge_2(['aa', 'xx', 'zz'], ['bb', 'cc']),
+         ['aa', 'bb', 'cc', 'xx', 'zz'])
+    test(linear_merge_2(['aa', 'xx'], ['bb', 'cc', 'zz']),
+         ['aa', 'bb', 'cc', 'xx', 'zz'])
+    test(linear_merge_2(['aa', 'aa'], ['aa', 'bb', 'bb']),
          ['aa', 'aa', 'aa', 'bb', 'bb'])
 
 

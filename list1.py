@@ -28,8 +28,10 @@ def match_ends(words):
             count += 1
     return count
 #
-#def match_ends(words):
-#    return sum(1 for w in words if len(w) >1 and w[0] == w[-1])
+# ou
+#
+def match_ends_2(words):
+   return sum(1 for w in words if len(w) >1 and w[0] == w[-1])
 #    
 #ou 
 #
@@ -87,6 +89,12 @@ def main():
     test(match_ends(['aba', 'xyz', 'aa', 'x', 'bbb']), 3)
     test(match_ends(['', 'x', 'xy', 'xyx', 'xx']), 2)
     test(match_ends(['aaa', 'be', 'abc', 'hello']), 1)
+    
+    print()
+    print('match_ends_2')
+    test(match_ends_2(['aba', 'xyz', 'aa', 'x', 'bbb']), 3)
+    test(match_ends_2(['', 'x', 'xy', 'xyx', 'xx']), 2)
+    test(match_ends_2(['aaa', 'be', 'abc', 'hello']), 1)
 
     print()
     print('front_x')

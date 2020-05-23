@@ -28,12 +28,12 @@ def match_ends(words):
             count += 1
     return count
 #
-# ou
+# or
 #
 def match_ends_2(words):
    return sum(1 for w in words if len(w) >1 and w[0] == w[-1])
 #    
-#ou 
+# or
 #
 def match_ends_3(words):
    return len(w for w in words if len(w) >1 and w[0] == w[-1])
@@ -66,11 +66,12 @@ def sort_last(tuples):
     def take_last(element):
         return element[-1]
     return sorted(tuples,  key=take_last)
-
+#
 # or
-# def sort_last(tuples):
-#     lista = list(tuples)
-#     return (sorted(lista, key=lambda element: element[-1]))
+#
+def sort_last_2(tuples):
+    lista = list(tuples)
+    return (sorted(lista, key=lambda element: element[-1]))
 
 
 # Simple provided test() function used in main() to print
@@ -118,6 +119,15 @@ def main():
     test(sort_last([(2, 3), (1, 2), (3, 1)]),
          [(3, 1), (1, 2), (2, 3)])
     test(sort_last([(1, 7), (1, 3), (3, 4, 5), (2, 2)]),
+         [(2, 2), (1, 3), (3, 4, 5), (1, 7)])
+    
+    print()
+    print('sort_last2')
+    test(sort_last_2([(1, 3), (3, 2), (2, 1)]),
+         [(2, 1), (3, 2), (1, 3)])
+    test(sort_last_2([(2, 3), (1, 2), (3, 1)]),
+         [(3, 1), (1, 2), (2, 3)])
+    test(sort_last_2([(1, 7), (1, 3), (3, 4, 5), (2, 2)]),
          [(2, 2), (1, 3), (3, 4, 5), (1, 7)])
 
 

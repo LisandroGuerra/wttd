@@ -35,8 +35,8 @@ def match_ends_2(words):
 #    
 #ou 
 #
-#def match_ends(words):
-#    return len(w for w in words if len(w) >1 and w[0] == w[-1])
+def match_ends_3(words):
+   return len(w for w in words if len(w) >1 and w[0] == w[-1])
 
 # B. front_x
 # Given a list of strings, return a list with the strings
@@ -95,6 +95,12 @@ def main():
     test(match_ends_2(['aba', 'xyz', 'aa', 'x', 'bbb']), 3)
     test(match_ends_2(['', 'x', 'xy', 'xyx', 'xx']), 2)
     test(match_ends_2(['aaa', 'be', 'abc', 'hello']), 1)
+    
+    print()
+    print('match_ends_3')
+    test(match_ends_3(['aba', 'xyz', 'aa', 'x', 'bbb']), 3)
+    test(match_ends_3(['', 'x', 'xy', 'xyx', 'xx']), 2)
+    test(match_ends_3(['aaa', 'be', 'abc', 'hello']), 1)
 
     print()
     print('front_x')

@@ -28,9 +28,16 @@ def donuts(count):
         return 'Number of donuts: ' + str(count)  
     return 'Number of donuts: many'
 #ou
-#
+def donuts_2(count):
+    res = 'Number of donuts: '
+    if count < 10:
+        res += str(count)
+    else:
+        res += 'many'
+    return res
 #ou
-#return 'Number of donuts: {0}' .format(count if count <= 9 else 'many')
+def donuts_3(count):
+    return 'Number of donuts: {0}' .format(count if count <= 9 else 'many')
 
 
 # B. both_ends
@@ -98,6 +105,22 @@ def main():
     test(donuts(9), 'Number of donuts: 9')
     test(donuts(10), 'Number of donuts: many')
     test(donuts(99), 'Number of donuts: many')
+    
+    print()
+    print('donuts  2')
+    # Each line calls donuts, compares its result to the expected for that call.
+    test(donuts_2(4), 'Number of donuts: 4')
+    test(donuts_2(9), 'Number of donuts: 9')
+    test(donuts_2(10), 'Number of donuts: many')
+    test(donuts_2(99), 'Number of donuts: many')
+    
+    print()
+    print('donuts 3')
+    # Each line calls donuts, compares its result to the expected for that call.
+    test(donuts_3(4), 'Number of donuts: 4')
+    test(donuts_3(9), 'Number of donuts: 9')
+    test(donuts_3(10), 'Number of donuts: many')
+    test(donuts_3(99), 'Number of donuts: many')
 
     print()
     print('both_ends')

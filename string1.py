@@ -51,9 +51,14 @@ def both_ends(s):
     return s[:2] + s[-2:]
     
 #ou
-#return '' if len(s) <= 1 else s[:2] + s[-2:]
+
+def both_ends2(s):
+    return '' if len(s) <= 1 else s[:2] + s[-2:]
+
 #ou melhor
-#return s[:2] + s[-2:] if len(s) >= 2 else ''
+
+def both_ends3(s):
+    return s[:2] + s[-2:] if len(s) >= 2 else ''
 
 
 # C. fix_start
@@ -128,6 +133,20 @@ def main():
     test(both_ends('Hello'), 'Helo')
     test(both_ends('a'), '')
     test(both_ends('xyz'), 'xyyz')
+    
+    print()
+    print('both_ends 2')
+    test(both_ends2('spring'), 'spng')
+    test(both_ends2('Hello'), 'Helo')
+    test(both_ends2('a'), '')
+    test(both_ends2('xyz'), 'xyyz')
+    
+    print()
+    print('both_ends 3')
+    test(both_ends3('spring'), 'spng')
+    test(both_ends3('Hello'), 'Helo')
+    test(both_ends3('a'), '')
+    test(both_ends3('xyz'), 'xyyz')
 
     print()
     print('fix_start')

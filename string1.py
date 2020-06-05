@@ -27,7 +27,7 @@ def donuts(count):
     if count < 10:
         return 'Number of donuts: ' + str(count)  
     return 'Number of donuts: many'
-#ou
+# or
 def donuts_2(count):
     res = 'Number of donuts: '
     if count < 10:
@@ -35,7 +35,7 @@ def donuts_2(count):
     else:
         res += 'many'
     return res
-#ou
+# or
 def donuts_3(count):
     return 'Number of donuts: {0}' .format(count if count <= 9 else 'many')
 
@@ -50,12 +50,12 @@ def both_ends(s):
         return ''
     return s[:2] + s[-2:]
     
-#ou
+# or
 
 def both_ends2(s):
     return '' if len(s) <= 1 else s[:2] + s[-2:]
 
-#ou melhor
+# or bether
 
 def both_ends3(s):
     return s[:2] + s[-2:] if len(s) >= 2 else ''
@@ -73,7 +73,10 @@ def both_ends3(s):
 def fix_start(s):
     head, tail = s[0],s[1:] 
     return head + tail.replace(head, '*')
-    #return s[0] + s[1:].replace(s[0], '*')
+    
+ # or
+def fix_start2(s):
+    return s[0] + s[1:].replace(s[0], '*')
 
 
 # D. MixUp
@@ -86,9 +89,10 @@ def fix_start(s):
 def mix_up(a, b):
     return b[:2] + a[2:] + ' ' + a[:2] + b[2:]
     
-    #melhor
-    #parts = [b[:2], a[2:], ' ', a[:2], b[2:]]
-    #return ''.join(parts)
+# or bether
+def mix_up2(a, b):
+    parts = [b[:2], a[2:], ' ', a[:2], b[2:]]
+    return ''.join(parts)
 
 
 # Provided simple test() function used in main() to print
@@ -154,6 +158,13 @@ def main():
     test(fix_start('aardvark'), 'a*rdv*rk')
     test(fix_start('google'), 'goo*le')
     test(fix_start('donut'), 'donut')
+    
+    print()
+    print('fix_start 2')
+    test(fix_start2('babble'), 'ba**le')
+    test(fix_start2('aardvark'), 'a*rdv*rk')
+    test(fix_start2('google'), 'goo*le')
+    test(fix_start2('donut'), 'donut')
 
     print()
     print('mix_up')
@@ -161,6 +172,13 @@ def main():
     test(mix_up('dog', 'dinner'), 'dig donner')
     test(mix_up('gnash', 'sport'), 'spash gnort')
     test(mix_up('pezzy', 'firm'), 'fizzy perm')
+    
+    print()
+    print('mix_up 2')
+    test(mix_up2('mix', 'pod'), 'pox mid')
+    test(mix_up2('dog', 'dinner'), 'dig donner')
+    test(mix_up2('gnash', 'sport'), 'spash gnort')
+    test(mix_up2('pezzy', 'firm'), 'fizzy perm')
 
 
 # Standard boilerplate to call the main() function.

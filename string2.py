@@ -23,12 +23,12 @@ def verbing(s):
     sufix = 'ly' if s.endswith('ing')
     return s + sufix
     
-#def verbing(s):
-#    if len(s) < 3:
-#        return s
-#    if s[-3:] == 'ing':
-#        return s + 'ly'
-#    return s + 'ing'
+def verbing2(s):
+   if len(s) < 3:
+       return s
+   if s[-3:] == 'ing':
+       return s + 'ly'
+   return s + 'ing'
 
 
 # E. not_bad
@@ -112,6 +112,12 @@ def main():
     test(verbing('hail'), 'hailing')
     test(verbing('swiming'), 'swimingly')
     test(verbing('do'), 'do')
+    
+    print()
+    print('verbing2')
+    test(verbing2('hail'), 'hailing')
+    test(verbing2('swiming'), 'swimingly')
+    test(verbing2('do'), 'do')
 
     print()
     print('not_bad')
